@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>HTZ Collapsibles Index</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.slate.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top ">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">HTZ Collapsibles</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="module-htz-collapsibles.html">htz-collapsibles</a></li><li><a href="module-htz-collapsibles_elHasLayout.html">htz-collapsibles/elHasLayout</a></li><li><a href="module-htz-collapsibles_evaluate.html">htz-collapsibles/evaluate</a></li><li><a href="module-htz-collapsibles_isCollapsible.html">htz-collapsibles/isCollapsible</a></li><li><a href="module-htz-collapsibles_toggleCollapsible.html">htz-collapsibles/toggleCollapsible</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+		<div class="col-sm-3 col-md-3">
+            <form class="navbar-form" role="search">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-8">
+	
+		<div id="main">
+			
+
+	
+	
+
+
+
+    <h3>htz-collapsibles 0.1.0</h3>
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+    <section class="readme-section">
+        <article><h1>Responsive-Enabled Accessible Collapsible Content</h1><p>This model enables markup agnostic collapsible content, that is accessible 
+and can change based on viewport conditions.</p>
+<p>Use the Breakpoints defined in <a href="https://github.com/txhawks/jigsass-tools-mq/">JigSass MQ</a>
+to define in which breakpoints an element is collapsible by specifying in the 
+<code>data-collapsible-bps</code> as a comma separated list in the following format:</p>
+<ul>
+<li><code>&lt;breakpoint-name&gt;</code>: min-width breakpoints</li>
+<li><code>until-&lt;breakpoint-name&gt;</code>: max-width breakpoints</li>
+<li><code>&lt;breakpoint-name&gt;-until-&lt;breakpoint-name&gt;</code>: min-width-until-max-width (exclusive) breakpoints</li>
+</ul>
+<p>So, <code>data-collapsible-bps=&quot;default&quot;</code> on the collapsible element's wrapper would render that 
+element collapsible on all breakpoints, while <code>data-collapsible-bps=&quot;s-until-m, l&quot;</code>, would make 
+an element collapsible between the <code>s</code> breakpoint and the <code>m</code> breakpoint (not including), and then 
+again from the <code>l</code> breakpoint on.</p>
+<p>Initialize collapsible elements with:</p>
+<pre class="prettyprint source lang-js"><code>  const collapibleEls = collapsibles(
+    labelExpand,    // The label used to describe the toggle button  when
+                    // the element is collapsed and it is used expanding.
+
+    labelCollapse,  // The label used to describe the toggle button when 
+                    //the element is expanded and it is used collapsing.
+
+    // Optional arguments
+    collapsedClass, // The label to attach to the wrapper when it is collapsed.
+                    // Default: 'o-collapsible-is-collapsed'
+
+    expandedClass,  // The label to attach to the wrapper when it is expanded.
+                    // Default: 'o-collapsible-is-expanded'
+
+    initClass,      // A class to identify collapsible items by.
+                    // Default: 'js-collapsible'
+
+    bpsSelector     // A selector for the element to which the 
+                    // active breakpoint data is attached.
+                    // See https://github.com/haaretz/htz-parse-bps-state
+  );</code></pre></article>
+    </section>
+
+
+
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+		<div class="col-md-3">
+			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+		</div>
+	
+
+</div>
+</div>
+
+<div class="modal fade" id="searchResults">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Search results</h4>
+      </div>
+      <div class="modal-body"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>
+
+<footer>
+
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a>
+	
+		on May 1st 2016, 5:27:56 pm
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+<script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			var id = $( heading ).attr( "id" );
+			return id && id.replace(/\~/g, '-inner-').replace(/\./g, '-static-') || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		SearcherDisplay.init();
+	});
+</script>
+
+</body>
+</html>
