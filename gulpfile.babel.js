@@ -60,6 +60,7 @@ gulp.task('jsdoc', $.shell.task([
 
 // Push documentation to github
 gulp.task('gh-pages', $.shell.task([
+  'git push origin --delete gh-pages',
   `git subtree push --prefix docs/htz-collapsibles/${pkg.version} origin gh-pages`,
 ]));
 
