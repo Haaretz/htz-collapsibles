@@ -33,8 +33,8 @@ export default function toggleCollapsible(
 ) {
   const isCollapsed = !elHasLayout(contentElem);
 
-  const collapsedClassRegex = new RegExp(`(${collapsedClass}[^'"\s]*)`, 'gi');
-  const expandedClassRegex = new RegExp(`(${expandedClass}[^'"\s]*)`, 'gi');
+  const collapsedClassRegex = new RegExp(`(${collapsedClass}[^'"\\s]*)`, 'gi');
+  const expandedClassRegex = new RegExp(`(${expandedClass}[^'"\\s]*)`, 'gi');
 
   if (isCollapsed) {
     wrapper.classList.add(expandedClass);

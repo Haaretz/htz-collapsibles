@@ -36,7 +36,7 @@ export default function evaluate(
   bpsSelector
 ) {
   const bpsState = parseBpsState(bpsSelector);
-  const collapsedClassRegex = new RegExp(`(${collapsedClass}[^'"\s]*)`, 'gi');
+  const collapsedClassRegex = new RegExp(`(${collapsedClass}[^'"\\s]*)`, 'gi');
 
   elements.forEach((element, index) => {
     const elIsCollapsible = isCollapsible(element, bpsState);
