@@ -4,6 +4,8 @@
  */
 
 import elHasLayout from 'htz-collapsibles/elHasLayout';
+import isCollapsible from 'htz-collapsibles/isCollapsible';
+import { parseBpsState } from 'htz-parse-bps-state';
 
 /**
  * Collapse or expand an element
@@ -17,6 +19,9 @@ import elHasLayout from 'htz-collapsibles/elHasLayout';
  *    when the element is expanded and it is used collapsing.
  * @param {String} collapsedClass - The label to attach to the wrapper when it is collapsed.
  * @param {String} expandedClass - The label to attach to the wrapper when it is expanded.
+ * @param {String} bpsSelector - A selector for the element to which the active
+ *    breakpoint data is attached. See
+ *    [htz-parse-bps-state](https://github.com/haaretz/htz-parse-bps-state)
  *
  * @return {HTMLElement} the wrapper. Allows chaining
  *
@@ -29,7 +34,8 @@ export default function toggleCollapsible(
   labelExpand,
   labelCollapse,
   collapsedClass,
-  expandedClass
+  expandedClass,
+  bpsSelector
 ) {
   const isHidden = window.getComputedStyle(contentElem).visibility === 'hidden';
   const isCollapsed = !elHasLayout(contentElem) || isHidden || !contentElem;
@@ -46,12 +52,17 @@ export default function toggleCollapsible(
     toggleElem.setAttribute('aria-expanded', true);
   }
   else {
-    wrapper.classList.add(collapsedClass);
-    /* eslint-disable no-param-reassign */
-    wrapper.className = wrapper.className.replace(expandedClassRegex, '');
-    /* eslint-enable no-param-reassign */
-    toggleElem.setAttribute('aria-label', `"${labelExpand}"`);
-    toggleElem.setAttribute('aria-expanded', false);
+    const bpsState = parseBpsState(bpsSelector);
+
+    // Only collapse elements if collapsing is allowed at current breakpoint.
+    if (isCollapsible(wrapper, bpsState)) {
+      wrapper.classList.add(collapsedClass);
+      /* eslint-disable no-param-reassign */
+      wrapper.className = wrapper.className.replace(expandedClassRegex, '');
+      /* eslint-enable no-param-reassign */
+      toggleElem.setAttribute('aria-label', `"${labelExpand}"`);
+      toggleElem.setAttribute('aria-expanded', false);
+    }
   }
 
   return wrapper;
