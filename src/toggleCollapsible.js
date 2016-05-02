@@ -33,15 +33,22 @@ export default function toggleCollapsible(
 ) {
   const isCollapsed = !elHasLayout(contentElem);
 
+  const collapsedClassRegex = new RegExp(`(${collapsedClass}[^'"\s]*)`, 'gi');
+  const expandedClassRegex = new RegExp(`(${expandedClass}[^'"\s]*)`, 'gi');
+
   if (isCollapsed) {
     wrapper.classList.add(expandedClass);
-    wrapper.classList.remove(collapsedClass);
+    /* eslint-disable no-param-reassign */
+    wrapper.className = wrapper.className.replace(collapsedClassRegex, '');
+    /* eslint-enable no-param-reassign */
     toggleElem.setAttribute('aria-label', `"${labelCollapse}"`);
     toggleElem.setAttribute('aria-expanded', true);
   }
   else {
     wrapper.classList.add(collapsedClass);
-    wrapper.classList.remove(expandedClass);
+    /* eslint-disable no-param-reassign */
+    wrapper.className = wrapper.className.replace(expandedClassRegex, '');
+    /* eslint-enable no-param-reassign */
     toggleElem.setAttribute('aria-label', `"${labelExpand}"`);
     toggleElem.setAttribute('aria-expanded', false);
   }

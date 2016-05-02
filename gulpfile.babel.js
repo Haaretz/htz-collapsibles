@@ -54,7 +54,7 @@ function eslint(files, options) {
 
 gulp.task('eslint', eslint(['**/*.js']));
 
-gulp.task('jsdoc', /*['cleanDocs', 'eslint'],*/ $.shell.task([
+gulp.task('jsdoc', $.shell.task([
   'node_modules/.bin/jsdoc --verbose -c jsdoc.conf.json',
 ]));
 

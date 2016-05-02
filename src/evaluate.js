@@ -36,6 +36,7 @@ export default function evaluate(
   bpsSelector
 ) {
   const bpsState = parseBpsState(bpsSelector);
+  const collapsedClassRegex = new RegExp(`(${collapsedClass}[^'"\s]*)`, 'gi');
 
   elements.forEach((element, index) => {
     const elIsCollapsible = isCollapsible(element, bpsState);
@@ -79,7 +80,9 @@ export default function evaluate(
       toggleElem.removeAttribute('aria-label');
       toggleElem.removeAttribute('aria-expanded');
       element.classList.add(expandedClass);
-      element.classList.remove(collapsedClass);
+      /* eslint-disable no-param-reassign */
+      element.className = element.className.replace(collapsedClassRegex, '');
+      /* eslint-enable no-param-reassign */
     }
   });
 
