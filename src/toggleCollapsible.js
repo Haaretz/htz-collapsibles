@@ -31,7 +31,8 @@ export default function toggleCollapsible(
   collapsedClass,
   expandedClass
 ) {
-  const isCollapsed = !elHasLayout(contentElem);
+  const isHidden = window.getComputedStyle(contentElem).visibility === 'hidden';
+  const isCollapsed = !elHasLayout(contentElem) || isHidden || !contentElem;
 
   const collapsedClassRegex = new RegExp(`(${collapsedClass}[^'"\\s]*)`, 'gi');
   const expandedClassRegex = new RegExp(`(${expandedClass}[^'"\\s]*)`, 'gi');

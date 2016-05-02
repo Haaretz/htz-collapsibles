@@ -65,7 +65,10 @@ export default function evaluate(
       toggleElem.removeEventListener('click', toggle, false);
       toggleElem.addEventListener('click', toggle, false);
 
-      if (elHasLayout(contentElem)) {
+      if (
+        elHasLayout(contentElem) ||
+        window.getComputedStyle(contentElem).visibility !== 'hidden'
+      ) {
         toggleElem.setAttribute('aria-label', `"${labelCollapse}"`);
         toggleElem.setAttribute('aria-expanded', true);
       }
