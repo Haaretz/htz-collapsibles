@@ -52,7 +52,8 @@ export default function evaluate(
         labelExpand,
         labelCollapse,
         collapsedClass,
-        expandedClass
+        expandedClass,
+        bpsSelector
       );
     }
 
@@ -85,8 +86,10 @@ export default function evaluate(
       element.classList.add(expandedClass);
       /* eslint-disable no-param-reassign */
       element.className = element.className.replace(collapsedClassRegex, '');
-      /* eslint-enable no-param-reassign */
     }
+
+    element.toggle = toggle;
+    /* eslint-enable no-param-reassign */
   });
 
   return elements;
