@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>HTZ Collapsibles Module: htz-collapsibles/elHasLayout</title>
+	<title>HTZ Collapsibles Module: htz-collapsibles/toggleCollapsible</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -63,7 +63,7 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Module: htz-collapsibles/elHasLayout</h1>
+	<h1 class="page-title">Module: htz-collapsibles/toggleCollapsible</h1>
 <section>
 
 <header>
@@ -84,7 +84,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="module:htz-collapsibles/elHasLayout"><span class="type-signature">&lt;private> </span>(require("htz-collapsibles/elHasLayout"))(element)</h4>
+    <h4 class="name" id="module:htz-collapsibles/toggleCollapsible"><span class="type-signature">&lt;private> </span>(require("htz-collapsibles/toggleCollapsible"))(wrapper, contentElem, toggleElem, labelExpand, labelCollapse, collapsedClass, expandedClass, bpsSelector)</h4>
     
     
 </dt>
@@ -92,7 +92,7 @@
 
     
     <div class="description">
-        <p>Check if an element has layout</p>
+        <p>Collapse or expand an element</p>
     </div>
     
 
@@ -127,7 +127,7 @@
 
         <tr>
             
-                <td class="name"><code>element</code></td>
+                <td class="name"><code>wrapper</code></td>
             
 
             <td class="type">
@@ -144,7 +144,179 @@
 
             
 
-            <td class="description last"><p>An element to evaluate the layout of</p></td>
+            <td class="description last"><p>The element wrapping</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>contentElem</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">HTMLElement</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The element containing the collapsible content.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>toggleElem</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">HTMLElement</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The clickable element used toggling.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>labelExpand</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The label used to describe the toggle button
+   when the element is collapsed and it is used expanding.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>labelCollapse</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The label used to describe the toggle button
+   when the element is expanded and it is used collapsing.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>collapsedClass</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The label to attach to the wrapper when it is collapsed.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>expandedClass</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The label to attach to the wrapper when it is expanded.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>bpsSelector</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A selector for the element to which the active
+   breakpoint data is attached. See
+   <a href="https://github.com/haaretz/htz-parse-bps-state">htz-parse-bps-state</a></p></td>
         </tr>
 
     
@@ -208,7 +380,7 @@
     
             
 <div class="param-desc">
-    <p>Indicates if an element has layout</p>
+    <p>the wrapper. Allows chaining</p>
 </div>
 
 
@@ -219,7 +391,7 @@
     </dt>
     <dd>
         
-<span class="param-type">Boolean</span>
+<span class="param-type">HTMLElement</span>
 
 
 
@@ -295,7 +467,7 @@
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a>
 	
-		on May 3rd 2016, 5:13:52 pm
+		on May 3rd 2016, 5:19:51 pm
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
