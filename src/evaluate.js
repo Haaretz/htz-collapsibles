@@ -88,7 +88,9 @@ export default function evaluate(
       element.className = element.className.replace(collapsedClassRegex, '');
     }
 
-    element.toggle = toggle;
+    if (typeof element.toggle !== 'function') {
+      element.toggle = toggle;
+    }
     /* eslint-enable no-param-reassign */
   });
 
