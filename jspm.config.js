@@ -21,8 +21,8 @@ SystemJS.config({
   ],
   map: {
     "buffer": "github:jspm/nodelibs-buffer@0.2.0-alpha",
-    "htz-parse-bps-state": "github:haaretz/htz-parse-bps-state@0.1.0",
-    "lodash-es": "npm:lodash-es@4.11.1",
+    "htz-parse-bps-state": "github:haaretz/htz-parse-bps-state@0.1.1",
+    "lodash-es": "npm:lodash-es@4.11.2",
     "plugin-babel": "npm:systemjs-plugin-babel@0.0.9"
   },
   packages: {

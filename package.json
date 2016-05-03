@@ -42,8 +42,8 @@
       "lib": "src"
     },
     "dependencies": {
-      "htz-parse-bps-state": "github:haaretz/htz-parse-bps-state@^0.1.0",
-      "lodash-es": "npm:lodash-es@^4.11.1"
+      "htz-parse-bps-state": "github:haaretz/htz-parse-bps-state@^0.1.1",
+      "lodash-es": "npm:lodash-es@^4.11.2"
     },
     "devDependencies": {
       "plugin-babel": "npm:systemjs-plugin-babel@^0.0.9"
