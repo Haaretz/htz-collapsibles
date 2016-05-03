@@ -18,7 +18,7 @@ import { evaluateBp } from 'htz-parse-bps-state';
   * @access private
   */
 export default function isCollapsible(elem, activeBps) {
-  const bps = elem.getAttribute('data-collapsible-bps');
+  let bps = elem.getAttribute('data-collapsible-bps');
 
   if (bps) {
     bps = bps.split(',');
