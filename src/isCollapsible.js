@@ -21,11 +21,16 @@ export default function isCollapsible(elem, activeBps) {
   const bps = elem.getAttribute('data-collapsible-bps');
 
   if (bps) {
-    return bps.split(',').reduce((prevBp, currentBp) =>
-      prevBp === true || // Short circuit if prev bp is already true.
-      evaluateBp(prevBp.trim ? prevBp.trim() : prevBp, activeBps) ||
-      evaluateBp(currentBp.trim ? currentBp.trim() : currentBp, activeBps
-    ));
+    bp = bps.split(',');
+
+    if (bps.length > 1) {
+      return bps.reduce((prevBp, currentBp) =>
+        prevBp === true || // Short circuit if prev bp is already true.
+        evaluateBp(prevBp.trim ? prevBp.trim() : prevBp, activeBps) ||
+        evaluateBp(currentBp.trim ? currentBp.trim() : currentBp, activeBps
+      ));
+    }
+    else if (bp.length === 1) return evaluateBp(bps[0].trim ? bps[0].trim() : bps[0], activeBps);
   }
 
   return false;
