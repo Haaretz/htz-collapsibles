@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>HTZ Collapsibles Module: htz-collapsibles</title>
+	<title>HTZ Collapsibles Module: htz-collapsibles/isCollapsible</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -63,7 +63,7 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Module: htz-collapsibles</h1>
+	<h1 class="page-title">Module: htz-collapsibles/isCollapsible</h1>
 <section>
 
 <header>
@@ -79,15 +79,12 @@
     <div class="container-overview">
     
         
-            <div class="description"><p>HTZ COLLAPSIBLES</p>
-<p>Responsive-enabled, accessible collapsible content</p></div>
-        
 
         
             
 <hr>
 <dt>
-    <h4 class="name" id="module:htz-collapsibles"><span class="type-signature"></span>(require("htz-collapsibles"))(labelExpand, labelCollapse, <span class="optional">collapsedClass</span>, <span class="optional">expandedClass</span>, <span class="optional">initClass</span>, <span class="optional">bpsSelector</span>)</h4>
+    <h4 class="name" id="module:htz-collapsibles/isCollapsible"><span class="type-signature">&lt;private> </span>(require("htz-collapsibles/isCollapsible"))(elem, activeBps)</h4>
     
     
 </dt>
@@ -95,7 +92,8 @@
 
     
     <div class="description">
-        <p>Initialize collapsible elements</p>
+        <p>Evaluate if an element is collapsible at the current breakpoint
+based on values specified in the <code>data-collapsible-bps</code> attribute.</p>
     </div>
     
 
@@ -118,11 +116,7 @@
         <th>Type</th>
 
         
-        <th>Argument</th>
-        
 
-        
-        <th>Default</th>
         
 
         <th class="last">Description</th>
@@ -134,13 +128,13 @@
 
         <tr>
             
-                <td class="name"><code>labelExpand</code></td>
+                <td class="name"><code>elem</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">String</span>
+<span class="param-type">HTMLElement</span>
 
 
 
@@ -148,36 +142,23 @@
             </td>
 
             
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
 
             
-                <td class="default">
-                
-                </td>
-            
 
-            <td class="description last"><p>The label used to describe the toggle button
-   when the element is collapsed and it is used expanding.</p></td>
+            <td class="description last"><p>The element to evalute.</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>labelCollapse</code></td>
+                <td class="name"><code>activeBps</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">String</span>
+<span class="param-type">Object</span>
 
 
 
@@ -185,184 +166,11 @@
             </td>
 
             
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
 
             
-                <td class="default">
-                
-                </td>
-            
 
-            <td class="description last"><p>The label used to describe the toggle button
-   when the element is expanded and it is used collapsing.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>collapsedClass</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    'o-collapsible-is-collapsed'
-                
-                </td>
-            
-
-            <td class="description last"><p>The label to attach to the wrapper when it is collapsed.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>expandedClass</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    'o-collapsible-is-expanded'
-                
-                </td>
-            
-
-            <td class="description last"><p>The label to attach to the wrapper when it is expanded.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>initClass</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    'js-collapsible'
-                
-                </td>
-            
-
-            <td class="description last"><p>A class to identify collapsible items by.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>bpsSelector</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    'head'
-                
-                </td>
-            
-
-            <td class="description last"><p>A selector for the element to which the active breakpoint data is attached.
-   See <a href="https://github.com/haaretz/htz-parse-bps-state">htz-parse-bps-state</a></p></td>
+            <td class="description last"><p>A JSON-like object extracted from CSS,
+   declaring if a given breakpoint is currently active or inactive.</p></td>
         </tr>
 
     
@@ -426,7 +234,9 @@
     
             
 <div class="param-desc">
-    <p>Returns an array of collapsible elements.</p>
+    <ul>
+<li>Indicates if an element is currently collapsible.</li>
+</ul>
 </div>
 
 
@@ -437,7 +247,7 @@
     </dt>
     <dd>
         
-<span class="param-type">Array.&lt;HTMLElement></span>
+<span class="param-type">Bollean</span>
 
 
 
@@ -513,7 +323,7 @@
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a>
 	
-		on May 3rd 2016, 5:36:25 pm
+		on May 3rd 2016, 6:09:35 pm
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
