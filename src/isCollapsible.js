@@ -21,7 +21,7 @@ export default function isCollapsible(elem, activeBps) {
   const bps = elem.getAttribute('data-collapsible-bps');
 
   if (bps) {
-    bp = bps.split(',');
+    bps = bps.split(',');
 
     if (bps.length > 1) {
       return bps.reduce((prevBp, currentBp) =>
@@ -30,7 +30,7 @@ export default function isCollapsible(elem, activeBps) {
         evaluateBp(currentBp.trim ? currentBp.trim() : currentBp, activeBps
       ));
     }
-    else if (bp.length === 1) return evaluateBp(bps[0].trim ? bps[0].trim() : bps[0], activeBps);
+    else if (bps.length === 1) return evaluateBp(bps[0].trim ? bps[0].trim() : bps[0], activeBps);
   }
 
   return false;
