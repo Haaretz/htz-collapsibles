@@ -67,10 +67,10 @@ export default function evaluate(
       toggleElem.addEventListener('mousedown', toggle, false);
 
 
-      if (!toggleElem.getAttribute('tabindex')) {
+      if (!contentElem.getAttribute('tabindex')) {
         // Make content element programmatically focusable,
         // but keep it outside the tab cycle
-        toggleElem.setAttribute('tabindex', '-1');
+        contentElem.setAttribute('tabindex', '-1');
       }
 
       if (

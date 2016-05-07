@@ -50,6 +50,9 @@ export default function toggleCollapsible(
     /* eslint-enable no-param-reassign */
     toggleElem.setAttribute('aria-label', `"${labelCollapse}"`);
     toggleElem.setAttribute('aria-expanded', true);
+
+    // move focus to expanded content elem
+    contentElem.focus();
   }
   else {
     const bpsState = parseBpsState(bpsSelector);
