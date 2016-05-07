@@ -46,7 +46,7 @@ export default function evaluate(
 
     function toggle(e) {
       // Only with left click, or when toggled programattically
-      if (!e || e.button === 0) {
+      if (!e || e.button === 0 || e.keyCode === 13 || e.keyCode === 32) {
         return toggleCollapsible(
           element,
           contentElem,
@@ -68,8 +68,8 @@ export default function evaluate(
       // Since there is no way to know if an event handler is attached, first
       // try to remove the toggle handler before adding it again,
       // to prevent duplicate execution, in cases where it was already attached.
-      toggleElem.removeEventListener('mousedown', toggle, false);
-      toggleElem.addEventListener('mousedown', toggle, false);
+      toggleElem.removeEventListener('click', toggle, false);
+      toggleElem.addEventListener('click', toggle, false);
 
 
       if (!contentElem.getAttribute('tabindex')) {
