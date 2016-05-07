@@ -44,17 +44,22 @@ export default function evaluate(
     const contentElem = element.getElementsByClassName('js-collapsible__content')[0];
     const contentId = contentElem.id || `collapsible__content${index}`;
 
-    function toggle() {
-      return toggleCollapsible(
-        element,
-        contentElem,
-        toggleElem,
-        labelExpand,
-        labelCollapse,
-        collapsedClass,
-        expandedClass,
-        bpsSelector
-      );
+    function toggle(e) {
+      // Only with left click, or when toggled programattically
+      if (!e || e.button === 0) {
+        return toggleCollapsible(
+          element,
+          contentElem,
+          toggleElem,
+          labelExpand,
+          labelCollapse,
+          collapsedClass,
+          expandedClass,
+          bpsSelector
+        );
+      }
+
+      return false;
     }
 
     toggleElem.setAttribute('aria-controls', `"${contentId}"`);
