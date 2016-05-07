@@ -4,7 +4,6 @@
  */
 import { parseBpsState } from 'htz-parse-bps-state';
 import elHasLayout from 'htz-collapsibles/elHasLayout';
-import toggleCollapsible from 'htz-collapsibles/toggleCollapsible';
 import isCollapsible from 'htz-collapsibles/isCollapsible';
 
 
@@ -42,36 +41,8 @@ export default function evaluate(
     const elIsCollapsible = isCollapsible(element, bpsState);
     const toggleElem = element.getElementsByClassName('js-collapsible__toggle')[0];
     const contentElem = element.getElementsByClassName('js-collapsible__content')[0];
-    const contentId = contentElem.id || `collapsible__content${index}`;
-
-    function toggle(e) {
-      // Only with left click, or when toggled programattically
-      if (!e || e.button === 0 || e.keyCode === 13 || e.keyCode === 32) {
-        return toggleCollapsible(
-          element,
-          contentElem,
-          toggleElem,
-          labelExpand,
-          labelCollapse,
-          collapsedClass,
-          expandedClass,
-          bpsSelector
-        );
-      }
-
-      return false;
-    }
-
-    toggleElem.setAttribute('aria-controls', `"${contentId}"`);
 
     if (elIsCollapsible) {
-      // Since there is no way to know if an event handler is attached, first
-      // try to remove the toggle handler before adding it again,
-      // to prevent duplicate execution, in cases where it was already attached.
-      toggleElem.removeEventListener('click', toggle, false);
-      toggleElem.addEventListener('click', toggle, false);
-
-
       if (!contentElem.getAttribute('tabindex')) {
         // Make content element programmatically focusable,
         // but keep it outside the tab cycle
@@ -91,19 +62,14 @@ export default function evaluate(
       }
     }
     else {
-      toggleElem.removeEventListener('click', toggle, false);
       toggleElem.removeAttribute('aria-controls');
       toggleElem.removeAttribute('aria-label');
       toggleElem.removeAttribute('aria-expanded');
       element.classList.add(expandedClass);
       /* eslint-disable no-param-reassign */
       element.className = element.className.replace(collapsedClassRegex, '');
+      /* eslint-enable no-param-reassign */
     }
-
-    if (typeof element.toggle !== 'function') {
-      element.toggle = toggle;
-    }
-    /* eslint-enable no-param-reassign */
   });
 
   return elements;

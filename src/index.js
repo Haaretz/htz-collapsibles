@@ -8,6 +8,7 @@
  */
 import debounce from 'lodash-es/debounce';
 import evaluate from 'htz-collapsibles/evaluate';
+import toggleCollapsible from 'htz-collapsibles/toggleCollapsible';
 
 /**
  * Initialize collapsible elements
@@ -46,6 +47,39 @@ export default function collapsibles(
       bpsSelector
     );
   }
+
+  elements.forEach((element, index) => {
+    const toggleElem = element.getElementsByClassName('js-collapsible__toggle')[0];
+    const contentElem = element.getElementsByClassName('js-collapsible__content')[0];
+    const contentId = contentElem.id || `collapsible__content${index}`;
+
+    function toggle(e) {
+      // Only with left click, or when toggled programattically
+      if (!e || e.button === 0 || e.keyCode === 13 || e.keyCode === 32) {
+        return toggleCollapsible(
+          element,
+          contentElem,
+          toggleElem,
+          labelExpand,
+          labelCollapse,
+          collapsedClass,
+          expandedClass,
+          bpsSelector
+        );
+      }
+
+      return false;
+    }
+
+    toggleElem.addEventListener('click', toggle, false);
+    toggleElem.setAttribute('aria-controls', `"${contentId}"`);
+
+    if (typeof element.toggle !== 'function') {
+      /* eslint-disable no-param-reassign */
+      element.toggle = toggle;
+      /* eslint-enable no-param-reassign */
+    }
+  });
 
   window.addEventListener('resize', debounce(evaluateCb, 250));
 
