@@ -63,8 +63,15 @@ export default function evaluate(
       // Since there is no way to know if an event handler is attached, first
       // try to remove the toggle handler before adding it again,
       // to prevent duplicate execution, in cases where it was already attached.
-      toggleElem.removeEventListener('click', toggle, false);
-      toggleElem.addEventListener('click', toggle, false);
+      toggleElem.removeEventListener('mousedown', toggle, false);
+      toggleElem.addEventListener('mousedown', toggle, false);
+
+
+      if (!toggleElem.getAttribute('tabindex')) {
+        // Make content element programmatically focusable,
+        // but keep it outside the tab cycle
+        toggleElem.setAttribute('tabindex', '-1');
+      }
 
       if (
         elHasLayout(contentElem) ||

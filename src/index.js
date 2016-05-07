@@ -21,7 +21,7 @@ import evaluate from 'htz-collapsibles/evaluate';
  * @param {String} [expandedClass='o-collapsible-is-expanded']
  *    The label to attach to the wrapper when it is expanded.
  * @param {String} [initClass='js-collapsible'] - A class to identify collapsible items by.
- * @param {String} [bpsSelector='head']
+ * @param {String} [bpsSelector='body']
  *    A selector for the element to which the active breakpoint data is attached.
  *    See [htz-parse-bps-state](https://github.com/haaretz/htz-parse-bps-state)
  *
@@ -33,7 +33,7 @@ export default function collapsibles(
   collapsedClass = 'o-collapsible-is-collapsed',
   expandedClass = 'o-collapsible-is-expanded',
   initClass = 'js-collapsible',
-  bpsSelector = 'head'
+  bpsSelector = 'body'
 ) {
   const elements = Array.from(document.getElementsByClassName(initClass));
   function evaluateCb() {

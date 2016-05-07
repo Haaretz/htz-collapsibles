@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <link href="style.css" rel="stylesheet">
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
     <script src="jspm_packages/system.js"></script>
     <script src="jspm.browser.js"></script>
     <script src="jspm.config.js"></script>
@@ -12,7 +13,7 @@
   <body>
     <section id="test-section1"
              class="js-collapsible test-section"
-             data-collapsible-bps="until-tiny, medium-until-large, x-large">
+             data-collapsible-bps="until-small, medium-until-large, x-large">
       <h3 class="js-collapsible__header">
         Collapsible content
         <!-- Add aria-label, aria-controls, aria-expanded with js -->
@@ -22,6 +23,22 @@
       </h3>
       <div class="js-collapsible__content o-collapsible__content"
            id="collapsible__content1">
+        Sit repellat aspernatur voluptas cupiditate quis! Explicabo magni minima eaque eligendi ab! Ad corrupti nesciunt consectetur obcaecati magni. Dolorem repudiandae ullam vitae vel sint. Error dolorum facere ipsum laboriosam elit.
+      </div>
+    </section>
+
+    <section id="test-section2"
+             class="js-collapsible test-section"
+             data-collapsible-bps="default">
+      <h3 class="js-collapsible__header">
+        Collapsible content
+        <!-- Add aria-label, aria-controls, aria-expanded with js -->
+        <button class="js-collapsible__toggle o-collapsible__toggle">
+          toggle
+        </button>
+      </h3>
+      <div class="js-collapsible__content o-collapsible__content"
+           id="collapsible__content2">
         Sit repellat aspernatur voluptas cupiditate quis! Explicabo magni minima eaque eligendi ab! Ad corrupti nesciunt consectetur obcaecati magni. Dolorem repudiandae ullam vitae vel sint. Error dolorum facere ipsum laboriosam elit.
       </div>
     </section>
