@@ -53,11 +53,11 @@ export default function evaluate(
         elHasLayout(contentElem) ||
         window.getComputedStyle(contentElem).visibility !== 'hidden'
       ) {
-        toggleElem.setAttribute('aria-label', `"${labelCollapse}"`);
+        toggleElem.setAttribute('aria-label', labelCollapse);
         toggleElem.setAttribute('aria-expanded', true);
       }
       else {
-        toggleElem.setAttribute('aria-label', `"${labelExpand}"`);
+        toggleElem.setAttribute('aria-label', labelExpand);
         toggleElem.setAttribute('aria-expanded', false);
       }
     }

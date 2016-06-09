@@ -72,7 +72,7 @@ export default function collapsibles(
     }
 
     toggleElem.addEventListener('click', toggle, false);
-    toggleElem.setAttribute('aria-controls', `"${contentId}"`);
+    toggleElem.setAttribute('aria-controls', contentId);
 
     if (typeof element.toggle !== 'function') {
       /* eslint-disable no-param-reassign */

@@ -48,7 +48,7 @@ export default function toggleCollapsible(
     /* eslint-disable no-param-reassign */
     wrapper.className = wrapper.className.replace(collapsedClassRegex, '');
     /* eslint-enable no-param-reassign */
-    toggleElem.setAttribute('aria-label', `"${labelCollapse}"`);
+    toggleElem.setAttribute('aria-label', labelCollapse);
     toggleElem.setAttribute('aria-expanded', true);
 
     // move focus to expanded content elem
@@ -63,7 +63,7 @@ export default function toggleCollapsible(
       /* eslint-disable no-param-reassign */
       wrapper.className = wrapper.className.replace(expandedClassRegex, '');
       /* eslint-enable no-param-reassign */
-      toggleElem.setAttribute('aria-label', `"${labelExpand}"`);
+      toggleElem.setAttribute('aria-label', labelExpand);
       toggleElem.setAttribute('aria-expanded', false);
     }
   }
