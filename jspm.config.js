@@ -4,11 +4,6 @@ SystemJS.config({
       "htz-collapsibles/": "src/"
     }
   },
-  devConfig: {
-    "map": {
-      "plugin-babel": "npm:systemjs-plugin-babel@0.0.9"
-    }
-  },
   transpiler: "plugin-babel",
   packages: {
     "htz-collapsibles": {
@@ -31,8 +26,9 @@ SystemJS.config({
   ],
   map: {
     "buffer": "github:jspm/nodelibs-buffer@0.2.0-alpha",
-    "htz-parse-bps-state": "github:haaretz/htz-parse-bps-state@0.1.1",
-    "lodash-es": "npm:lodash-es@4.11.2",
+    "htz-parse-bps-state": "github:haaretz/htz-parse-bps-state@1.0.0",
+    "lodash-es": "npm:lodash-es@4.14.1",
+    "plugin-babel": "npm:systemjs-plugin-babel@0.0.13",
     "process": "github:jspm/nodelibs-process@0.2.0-alpha"
   },
   packages: {
