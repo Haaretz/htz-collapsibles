@@ -36,6 +36,7 @@ SystemJS.config({
     "crypto": "npm:jspm-nodelibs-crypto@0.2.0",
     "events": "npm:jspm-nodelibs-events@0.2.0",
     "fs": "npm:jspm-nodelibs-fs@0.2.0",
+    "htz-dispatch-event": "github:haaretz/htz-dispatch-event@1.0.1",
     "htz-parse-bps-state": "github:haaretz/htz-parse-bps-state@1.0.0",
     "lodash-es": "npm:lodash-es@4.16.4",
     "os": "npm:jspm-nodelibs-os@0.2.0",
