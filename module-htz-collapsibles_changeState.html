@@ -1,0 +1,1761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>htz-collapsibles/changeState - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav class="nav">
+    <h2><a href="index.html">Home</a></h2><h3>Events</h3><ul><li><a href="module-htz-htz-collapsibles_changeState-collapse.html#event:htz-collapsibles:collapse-after">htz-collapsibles:collapse-after</a></li><li><a href="module-htz-htz-collapsibles_changeState-collapse.html#event:htz-collapsibles:collapse-before">htz-collapsibles:collapse-before</a></li><li><a href="module-htz-htz-collapsibles_changeState-expand.html#event:htz-collapsibles:expand-after">htz-collapsibles:expand-after</a></li><li><a href="module-htz-htz-collapsibles_changeState-expand.html#event:htz-collapsibles:expand-before">htz-collapsibles:expand-before</a></li></ul><h3>Modules</h3><ul><li><a href="module-htz-collapsibles.html">htz-collapsibles</a><ul class='methods'><li data-type='method'><a href="module-htz-collapsibles.html#.getInstance">getInstance</a></li></ul></li><li><a href="module-htz-collapsibles_changeState.html">htz-collapsibles/changeState</a><ul class='methods'><li data-type='method'><a href="module-htz-collapsibles_changeState.html#~collapse">collapse</a></li><li data-type='method'><a href="module-htz-collapsibles_changeState.html#~expand">expand</a></li><li data-type='method'><a href="module-htz-collapsibles_changeState.html#~isCollapsed">isCollapsed</a></li><li data-type='method'><a href="module-htz-collapsibles_changeState.html#~toggle">toggle</a></li></ul></li><li><a href="module-htz-collapsibles_elHasLayout.html">htz-collapsibles/elHasLayout</a></li><li><a href="module-htz-collapsibles_evaluate.html">htz-collapsibles/evaluate</a></li><li><a href="module-htz-collapsibles_isCollapsible.html">htz-collapsibles/isCollapsible</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">htz-collapsibles/changeState</h1>
+    
+
+    <!--container.tmpl-->
+
+
+
+
+
+<section>
+
+
+
+<header data-tmpl="container.tmpl">
+    
+      <h2>Module: htz-collapsibles/changeState</h2>
+        
+    
+
+    
+      <div class="bs-callout bs-callout-default">
+        <h5>Members</h5>
+        <br />
+        <dl class="dl-horizontal methods-members">
+        <dt>Methods</dt><dd><ul>
+            <li><a href="#collapse">collapse</a></li>
+            
+            <li><a href="#expand">expand</a></li>
+            
+            <li><a href="#isCollapsed">isCollapsed</a></li>
+            
+            <li><a href="#toggle">toggle</a></li>
+            </ul></dd></dl></div>
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            <!--method.tmpl-->
+<div class="method-details">
+
+
+
+  <!--source-link.tmpl-->
+
+
+<div class="pull-right source-link-container">
+  <code class="source-link" data-tmpl="method-tmpl(1)">
+    <i class="fa fa-file-o"></i>
+    <a href="changeState.js.html">changeState.js</a>:<a href="changeState.js.html#line97">97</a>
+  </code>
+</div>
+
+
+
+
+    
+
+    
+
+    <h4 class="name" id="~collapse">
+      <a href="#params-collapse"><span class="type-signature">(inner) </span>collapse</a><span class="signature">(wrapper, contentElem, toggleElem, labelExpand, labelCollapse, collapsedClass, expandedClass, bpsSelector, isExpanded<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Boolean}</span>
+
+    </h4>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="description">
+    <p>Collapse a collapsible element</p>
+</div>
+
+
+
+
+
+
+
+
+<div class="collapse_" id="methodCollapse-collapse">
+
+  
+
+  
+
+<!-- details.tmpl -->
+
+
+
+
+
+
+
+
+<dl class="dl-horizontal">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+  <div id="params-collapse" class="bs-callout bs-callout-primary">
+    <h5>Parameters</h5>
+    <!--params.tmpl-->
+
+
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>wrapper</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">HTMLElement</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The element wrapper</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>contentElem</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">HTMLElement</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The element containing the collapsible content.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>toggleElem</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">HTMLElement</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The clickable element used for toggling.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>labelExpand</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The label used to describe the toggle button
+   when the element is collapsed and it is used expanding.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>labelCollapse</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The label used to describe the toggle button
+   when the element is expanded and it is used collapsing.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>collapsedClass</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The label to attach to the wrapper when it is collapsed.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>expandedClass</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The label to attach to the wrapper when it is expanded.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>bpsSelector</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>A selector for the element to which the active
+   breakpoint data is attached. See
+   <a href="https://github.com/haaretz/htz-parse-bps-state">htz-parse-bps-state</a></p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>isExpanded</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Indicates if the collapsible is currently collapsed (<code>false</code>) or
+  expanded (true`).</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+  </div>
+
+
+
+
+
+<h5>Fires:</h5>
+<ul>
+    <li><a href="module-htz-htz-collapsibles_changeState-collapse.html#event:htz-collapsibles:collapse-before">module:htz-htz-collapsibles/changeState~collapse#event:htz-collapsibles:collapse-before</a></li>
+
+    <li><a href="module-htz-htz-collapsibles_changeState-collapse.html#event:htz-collapsibles:collapse-after">module:htz-htz-collapsibles/changeState~collapse#event:htz-collapsibles:collapse-after</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+  <div class="bs-callout bs-callout-success">
+    <h5>Returns </h5>
+
+        
+<div class="param-desc">
+    <p>Returns <code>false</code> to indicate the element has been collapsed.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+</div>
+  
+
+
+
+
+
+
+</div>
+
+<!--
+<pre>
+{"comment":"/**\n * Collapse a collapsible element\n *\n * @param {HTMLElement} wrapper - The element wrapper\n * @param {HTMLElement} contentElem - The element containing the collapsible content.\n * @param {HTMLElement} toggleElem - The clickable element used for toggling.\n * @param {String} labelExpand - The label used to describe the toggle button\n *    when the element is collapsed and it is used expanding.\n * @param {String} labelCollapse - The label used to describe the toggle button\n *    when the element is expanded and it is used collapsing.\n * @param {String} collapsedClass - The label to attach to the wrapper when it is collapsed.\n * @param {String} expandedClass - The label to attach to the wrapper when it is expanded.\n * @param {String} bpsSelector - A selector for the element to which the active\n *    breakpoint data is attached. See\n *    [htz-parse-bps-state](https://github.com/haaretz/htz-parse-bps-state)\n * @param {Boolean} [isExpanded] - Indicates if the collapsible is currently collapsed (`false`) or\n *   expanded (true`).\n *\n * @fires module:htz-htz-collapsibles/changeState~collapse#htz-collapsibles:collapse-before\n * @fires module:htz-htz-collapsibles/changeState~collapse#htz-collapsibles:collapse-after\n *\n * @return {Boolean} Returns `false` to indicate the element has been collapsed.\n */","meta":{"range":[3788,6338],"filename":"changeState.js","lineno":97,"path":"/home/txh/code/haaretz/js-modules/htz-collapsibles/src","code":{"id":"astnode100000063","name":"collapse","type":"FunctionDeclaration","paramnames":["wrapper","contentElem","toggleElem","labelExpand","labelCollapse","collapsedClass","expandedClass","bpsSelector","isExpanded"]},"vars":{"expandedClassRegex":"module:htz-collapsibles/changeState~collapse~expandedClassRegex","bpsState":"module:htz-collapsibles/changeState~collapse~bpsState","allowed":"module:htz-collapsibles/changeState~collapse~allowed","wrapper.className":"module:htz-collapsibles/changeState~wrapper.className"},"shortpath":"changeState.js"},"description":"<p>Collapse a collapsible element</p>","params":[{"type":{"names":["HTMLElement"]},"description":"<p>The element wrapper</p>","name":"wrapper"},{"type":{"names":["HTMLElement"]},"description":"<p>The element containing the collapsible content.</p>","name":"contentElem"},{"type":{"names":["HTMLElement"]},"description":"<p>The clickable element used for toggling.</p>","name":"toggleElem"},{"type":{"names":["String"]},"description":"<p>The label used to describe the toggle button\n   when the element is collapsed and it is used expanding.</p>","name":"labelExpand"},{"type":{"names":["String"]},"description":"<p>The label used to describe the toggle button\n   when the element is expanded and it is used collapsing.</p>","name":"labelCollapse"},{"type":{"names":["String"]},"description":"<p>The label to attach to the wrapper when it is collapsed.</p>","name":"collapsedClass"},{"type":{"names":["String"]},"description":"<p>The label to attach to the wrapper when it is expanded.</p>","name":"expandedClass"},{"type":{"names":["String"]},"description":"<p>A selector for the element to which the active\n   breakpoint data is attached. See\n   <a href=\"https://github.com/haaretz/htz-parse-bps-state\">htz-parse-bps-state</a></p>","name":"bpsSelector"},{"type":{"names":["Boolean"]},"optional":true,"description":"<p>Indicates if the collapsible is currently collapsed (<code>false</code>) or\n  expanded (true`).</p>","name":"isExpanded"}],"fires":["module:htz-htz-collapsibles/changeState~collapse#event:htz-collapsibles:collapse-before","module:htz-htz-collapsibles/changeState~collapse#event:htz-collapsibles:collapse-after"],"returns":[{"type":{"names":["Boolean"]},"description":"<p>Returns <code>false</code> to indicate the element has been collapsed.</p>"}],"name":"collapse","longname":"module:htz-collapsibles/changeState~collapse","kind":"function","scope":"inner","memberof":"module:htz-collapsibles/changeState","___id":"T000002R000004","___s":true,"attribs":"<span class=\"type-signature\">(inner) </span>","id":"~collapse","signature":"<span class=\"signature\">(wrapper, contentElem, toggleElem, labelExpand, labelCollapse, collapsedClass, expandedClass, bpsSelector, isExpanded<span class=\"signature-attributes\">opt</span>)</span><span class=\"type-signature\"> &rarr; {Boolean}</span>","ancestors":["<a href=\"module-htz-collapsibles_changeState.html\">htz-collapsibles/changeState</a>~"]}
+</pre>
+-->
+</div>
+
+        
+            <!--method.tmpl-->
+<div class="method-details">
+
+
+
+  <!--source-link.tmpl-->
+
+
+<div class="pull-right source-link-container">
+  <code class="source-link" data-tmpl="method-tmpl(1)">
+    <i class="fa fa-file-o"></i>
+    <a href="changeState.js.html">changeState.js</a>:<a href="changeState.js.html#line192">192</a>
+  </code>
+</div>
+
+
+
+
+    
+
+    
+
+    <h4 class="name" id="~expand">
+      <a href="#params-expand"><span class="type-signature">(inner) </span>expand</a><span class="signature">(wrapper, contentElem, toggleElem, labelExpand, labelCollapse, collapsedClass, expandedClass, bpsSelector, isExpanded<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Boolean}</span>
+
+    </h4>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="description">
+    <p>Expand a collapsible element</p>
+</div>
+
+
+
+
+
+
+
+
+<div class="collapse_" id="methodCollapse-expand">
+
+  
+
+  
+
+<!-- details.tmpl -->
+
+
+
+
+
+
+
+
+<dl class="dl-horizontal">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+  <div id="params-expand" class="bs-callout bs-callout-primary">
+    <h5>Parameters</h5>
+    <!--params.tmpl-->
+
+
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>wrapper</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">HTMLElement</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The element wrapper</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>contentElem</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">HTMLElement</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The element containing the collapsible content.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>toggleElem</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">HTMLElement</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The clickable element used for toggling.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>labelExpand</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The label used to describe the toggle button
+   when the element is collapsed and it is used expanding.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>labelCollapse</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The label used to describe the toggle button
+   when the element is expanded and it is used collapsing.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>collapsedClass</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The label to attach to the wrapper when it is collapsed.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>expandedClass</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The label to attach to the wrapper when it is expanded.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>bpsSelector</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>A selector for the element to which the active
+   breakpoint data is attached. See
+   <a href="https://github.com/haaretz/htz-parse-bps-state">htz-parse-bps-state</a></p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>isExpanded</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Indicates if the collapsible is currently collapsed (<code>false</code>) or
+  expanded (true`).</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+  </div>
+
+
+
+
+
+<h5>Fires:</h5>
+<ul>
+    <li><a href="module-htz-htz-collapsibles_changeState-expand.html#event:htz-collapsibles:expand-before">module:htz-htz-collapsibles/changeState~expand#event:htz-collapsibles:expand-before</a></li>
+
+    <li><a href="module-htz-htz-collapsibles_changeState-expand.html#event:htz-collapsibles:expand-after">module:htz-htz-collapsibles/changeState~expand#event:htz-collapsibles:expand-after</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+  <div class="bs-callout bs-callout-success">
+    <h5>Returns </h5>
+
+        
+<div class="param-desc">
+    <p>Returns <code>true</code> to indicate the element has been expanded.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+</div>
+  
+
+
+
+
+
+
+</div>
+
+<!--
+<pre>
+{"comment":"/**\n * Expand a collapsible element\n *\n * @param {HTMLElement} wrapper - The element wrapper\n * @param {HTMLElement} contentElem - The element containing the collapsible content.\n * @param {HTMLElement} toggleElem - The clickable element used for toggling.\n * @param {String} labelExpand - The label used to describe the toggle button\n *    when the element is collapsed and it is used expanding.\n * @param {String} labelCollapse - The label used to describe the toggle button\n *    when the element is expanded and it is used collapsing.\n * @param {String} collapsedClass - The label to attach to the wrapper when it is collapsed.\n * @param {String} expandedClass - The label to attach to the wrapper when it is expanded.\n * @param {String} bpsSelector - A selector for the element to which the active\n *    breakpoint data is attached. See\n *    [htz-parse-bps-state](https://github.com/haaretz/htz-parse-bps-state)\n * @param {Boolean} [isExpanded] - Indicates if the collapsible is currently collapsed (`false`) or\n *   expanded (true`).\n *\n * @fires module:htz-htz-collapsibles/changeState~expand#htz-collapsibles:expand-before\n * @fires module:htz-htz-collapsibles/changeState~expand#htz-collapsibles:expand-after\n *\n * @return {Boolean} Returns `true` to indicate the element has been expanded.\n */","meta":{"range":[7646,10091],"filename":"changeState.js","lineno":192,"path":"/home/txh/code/haaretz/js-modules/htz-collapsibles/src","code":{"id":"astnode100000184","name":"expand","type":"FunctionDeclaration","paramnames":["wrapper","contentElem","toggleElem","labelExpand","labelCollapse","collapsedClass","expandedClass","bpsSelector","isExpanded"]},"vars":{"collapsedClassRegex":"module:htz-collapsibles/changeState~expand~collapsedClassRegex","allowed":"module:htz-collapsibles/changeState~expand~allowed","wrapper.className":"module:htz-collapsibles/changeState~wrapper.className","":null},"shortpath":"changeState.js"},"description":"<p>Expand a collapsible element</p>","params":[{"type":{"names":["HTMLElement"]},"description":"<p>The element wrapper</p>","name":"wrapper"},{"type":{"names":["HTMLElement"]},"description":"<p>The element containing the collapsible content.</p>","name":"contentElem"},{"type":{"names":["HTMLElement"]},"description":"<p>The clickable element used for toggling.</p>","name":"toggleElem"},{"type":{"names":["String"]},"description":"<p>The label used to describe the toggle button\n   when the element is collapsed and it is used expanding.</p>","name":"labelExpand"},{"type":{"names":["String"]},"description":"<p>The label used to describe the toggle button\n   when the element is expanded and it is used collapsing.</p>","name":"labelCollapse"},{"type":{"names":["String"]},"description":"<p>The label to attach to the wrapper when it is collapsed.</p>","name":"collapsedClass"},{"type":{"names":["String"]},"description":"<p>The label to attach to the wrapper when it is expanded.</p>","name":"expandedClass"},{"type":{"names":["String"]},"description":"<p>A selector for the element to which the active\n   breakpoint data is attached. See\n   <a href=\"https://github.com/haaretz/htz-parse-bps-state\">htz-parse-bps-state</a></p>","name":"bpsSelector"},{"type":{"names":["Boolean"]},"optional":true,"description":"<p>Indicates if the collapsible is currently collapsed (<code>false</code>) or\n  expanded (true`).</p>","name":"isExpanded"}],"fires":["module:htz-htz-collapsibles/changeState~expand#event:htz-collapsibles:expand-before","module:htz-htz-collapsibles/changeState~expand#event:htz-collapsibles:expand-after"],"returns":[{"type":{"names":["Boolean"]},"description":"<p>Returns <code>true</code> to indicate the element has been expanded.</p>"}],"name":"expand","longname":"module:htz-collapsibles/changeState~expand","kind":"function","scope":"inner","memberof":"module:htz-collapsibles/changeState","___id":"T000002R000019","___s":true,"attribs":"<span class=\"type-signature\">(inner) </span>","id":"~expand","signature":"<span class=\"signature\">(wrapper, contentElem, toggleElem, labelExpand, labelCollapse, collapsedClass, expandedClass, bpsSelector, isExpanded<span class=\"signature-attributes\">opt</span>)</span><span class=\"type-signature\"> &rarr; {Boolean}</span>","ancestors":["<a href=\"module-htz-collapsibles_changeState.html\">htz-collapsibles/changeState</a>~"]}
+</pre>
+-->
+</div>
+
+        
+            <!--method.tmpl-->
+<div class="method-details">
+
+
+
+  <!--source-link.tmpl-->
+
+
+<div class="pull-right source-link-container">
+  <code class="source-link" data-tmpl="method-tmpl(1)">
+    <i class="fa fa-file-o"></i>
+    <a href="changeState.js.html">changeState.js</a>:<a href="changeState.js.html#line268">268</a>
+  </code>
+</div>
+
+
+
+
+    
+
+    
+
+    <h4 class="name" id="~isCollapsed">
+      <a href="#params-isCollapsed"><span class="type-signature">(inner) </span>isCollapsed</a><span class="signature">(elem)</span><span class="type-signature"> &rarr; {Boolean}</span>
+
+    </h4>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="description">
+    <p>Check if an element is collapsed</p>
+</div>
+
+
+
+
+
+
+
+
+<div class="collapse_" id="methodCollapse-isCollapsed">
+
+  
+
+  
+
+<!-- details.tmpl -->
+
+
+
+
+
+
+
+
+<dl class="dl-horizontal">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+  <div id="params-isCollapsed" class="bs-callout bs-callout-primary">
+    <h5>Parameters</h5>
+    <!--params.tmpl-->
+
+
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>elem</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">HtmlElement</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The elemnt to test</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="bs-callout bs-callout-success">
+    <h5>Returns </h5>
+
+        
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+</div>
+  
+
+
+
+
+
+
+</div>
+
+<!--
+<pre>
+{"comment":"/**\n * Check if an element is collapsed\n *\n * @param {HtmlElement} elem - The elemnt to test\n *\n * @return {Boolean}\n */","meta":{"range":[10215,10376],"filename":"changeState.js","lineno":268,"path":"/home/txh/code/haaretz/js-modules/htz-collapsibles/src","code":{"id":"astnode100000299","name":"isCollapsed","type":"FunctionDeclaration","paramnames":["elem"]},"vars":{"isInvisible":"module:htz-collapsibles/changeState~isCollapsed~isInvisible"},"shortpath":"changeState.js"},"description":"<p>Check if an element is collapsed</p>","params":[{"type":{"names":["HtmlElement"]},"description":"<p>The elemnt to test</p>","name":"elem"}],"returns":[{"type":{"names":["Boolean"]}}],"name":"isCollapsed","longname":"module:htz-collapsibles/changeState~isCollapsed","kind":"function","scope":"inner","memberof":"module:htz-collapsibles/changeState","___id":"T000002R000033","___s":true,"attribs":"<span class=\"type-signature\">(inner) </span>","id":"~isCollapsed","signature":"<span class=\"signature\">(elem)</span><span class=\"type-signature\"> &rarr; {Boolean}</span>","ancestors":["<a href=\"module-htz-collapsibles_changeState.html\">htz-collapsibles/changeState</a>~"]}
+</pre>
+-->
+</div>
+
+        
+            <!--method.tmpl-->
+<div class="method-details">
+
+
+
+  <!--source-link.tmpl-->
+
+
+<div class="pull-right source-link-container">
+  <code class="source-link" data-tmpl="method-tmpl(1)">
+    <i class="fa fa-file-o"></i>
+    <a href="changeState.js.html">changeState.js</a>:<a href="changeState.js.html#line37">37</a>
+  </code>
+</div>
+
+
+
+
+    
+
+    
+
+    <h4 class="name" id="~toggle">
+      <a href="#params-toggle"><span class="type-signature">(inner) </span>toggle</a><span class="signature">(wrapper, contentElem, toggleElem, labelExpand, labelCollapse, collapsedClass, expandedClass, bpsSelector, isExpanded<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Boolean}</span>
+
+    </h4>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="description">
+    <p>Toggle an element's state between collapsed or expanded</p>
+</div>
+
+
+
+
+
+
+
+
+<div class="collapse_" id="methodCollapse-toggle">
+
+  
+
+  
+
+<!-- details.tmpl -->
+
+
+
+
+
+
+
+
+<dl class="dl-horizontal">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+  <div id="params-toggle" class="bs-callout bs-callout-primary">
+    <h5>Parameters</h5>
+    <!--params.tmpl-->
+
+
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>wrapper</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">HTMLElement</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The element wrapping</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>contentElem</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">HTMLElement</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The element containing the collapsible content.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>toggleElem</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">HTMLElement</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The clickable element used for toggling.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>labelExpand</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The label used to describe the toggle button
+   when the element is collapsed and the button is used for expanding.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>labelCollapse</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The label used to describe the toggle button
+   when the element is expanded and the button is used for collapsing.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>collapsedClass</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The label to attach to the wrapper when it is collapsed.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>expandedClass</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The label to attach to the wrapper when it is expanded.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>bpsSelector</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>A selector for the element to which the active
+   breakpoint data is attached. See
+   <a href="https://github.com/haaretz/htz-parse-bps-state">htz-parse-bps-state</a></p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>isExpanded</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Indicates if the collapsible is collapsed (<code>false</code>) or
+  expanded (true`).</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+  </div>
+
+
+
+
+
+<h5>Fires:</h5>
+<ul>
+    <li><a href="module-htz-htz-collapsibles_changeState-expand.html#event:htz-collapsibles:expand-before">module:htz-htz-collapsibles/changeState~expand#event:htz-collapsibles:expand-before</a></li>
+
+    <li><a href="module-htz-htz-collapsibles_changeState-expand.html#event:htz-collapsibles:expand-after">module:htz-htz-collapsibles/changeState~expand#event:htz-collapsibles:expand-after</a></li>
+
+    <li><a href="module-htz-htz-collapsibles_changeState-collapse.html#event:htz-collapsibles:collapse-before">module:htz-htz-collapsibles/changeState~collapse#event:htz-collapsibles:collapse-before</a></li>
+
+    <li><a href="module-htz-htz-collapsibles_changeState-collapse.html#event:htz-collapsibles:collapse-after">module:htz-htz-collapsibles/changeState~collapse#event:htz-collapsibles:collapse-after</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+  <div class="bs-callout bs-callout-success">
+    <h5>Returns </h5>
+
+        
+<div class="param-desc">
+    <p>The collapsible's state after toggling
+    (<code>true</code> if expanded, <code>false</code> if collapsed).</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+</div>
+  
+
+
+
+
+
+
+</div>
+
+<!--
+<pre>
+{"comment":"/**\n * Toggle an element's state between collapsed or expanded\n *\n * @param {HTMLElement} wrapper - The element wrapping\n * @param {HTMLElement} contentElem - The element containing the collapsible content.\n * @param {HTMLElement} toggleElem - The clickable element used for toggling.\n * @param {String} labelExpand - The label used to describe the toggle button\n *    when the element is collapsed and the button is used for expanding.\n * @param {String} labelCollapse - The label used to describe the toggle button\n *    when the element is expanded and the button is used for collapsing.\n * @param {String} collapsedClass - The label to attach to the wrapper when it is collapsed.\n * @param {String} expandedClass - The label to attach to the wrapper when it is expanded.\n * @param {String} bpsSelector - A selector for the element to which the active\n *    breakpoint data is attached. See\n *    [htz-parse-bps-state](https://github.com/haaretz/htz-parse-bps-state)\n * @param {Boolean} [isExpanded] - Indicates if the collapsible is collapsed (`false`) or\n *   expanded (true`).\n *\n * @fires module:htz-htz-collapsibles/changeState~expand#htz-collapsibles:expand-before\n * @fires module:htz-htz-collapsibles/changeState~expand#htz-collapsibles:expand-after\n * @fires module:htz-htz-collapsibles/changeState~collapse#htz-collapsibles:collapse-before\n * @fires module:htz-htz-collapsibles/changeState~collapse#htz-collapsibles:collapse-after\n *\n * @return {Boolean} The collapsible's state after toggling\n *     (`true` if expanded, `false` if collapsed).\n */","meta":{"range":[1845,2468],"filename":"changeState.js","lineno":37,"path":"/home/txh/code/haaretz/js-modules/htz-collapsibles/src","code":{"id":"astnode100000017","name":"toggle","type":"FunctionDeclaration","paramnames":["wrapper","contentElem","toggleElem","labelExpand","labelCollapse","collapsedClass","expandedClass","bpsSelector","isExpanded"]},"shortpath":"changeState.js"},"description":"<p>Toggle an element's state between collapsed or expanded</p>","params":[{"type":{"names":["HTMLElement"]},"description":"<p>The element wrapping</p>","name":"wrapper"},{"type":{"names":["HTMLElement"]},"description":"<p>The element containing the collapsible content.</p>","name":"contentElem"},{"type":{"names":["HTMLElement"]},"description":"<p>The clickable element used for toggling.</p>","name":"toggleElem"},{"type":{"names":["String"]},"description":"<p>The label used to describe the toggle button\n   when the element is collapsed and the button is used for expanding.</p>","name":"labelExpand"},{"type":{"names":["String"]},"description":"<p>The label used to describe the toggle button\n   when the element is expanded and the button is used for collapsing.</p>","name":"labelCollapse"},{"type":{"names":["String"]},"description":"<p>The label to attach to the wrapper when it is collapsed.</p>","name":"collapsedClass"},{"type":{"names":["String"]},"description":"<p>The label to attach to the wrapper when it is expanded.</p>","name":"expandedClass"},{"type":{"names":["String"]},"description":"<p>A selector for the element to which the active\n   breakpoint data is attached. See\n   <a href=\"https://github.com/haaretz/htz-parse-bps-state\">htz-parse-bps-state</a></p>","name":"bpsSelector"},{"type":{"names":["Boolean"]},"optional":true,"description":"<p>Indicates if the collapsible is collapsed (<code>false</code>) or\n  expanded (true`).</p>","name":"isExpanded"}],"fires":["module:htz-htz-collapsibles/changeState~expand#event:htz-collapsibles:expand-before","module:htz-htz-collapsibles/changeState~expand#event:htz-collapsibles:expand-after","module:htz-htz-collapsibles/changeState~collapse#event:htz-collapsibles:collapse-before","module:htz-htz-collapsibles/changeState~collapse#event:htz-collapsibles:collapse-after"],"returns":[{"type":{"names":["Boolean"]},"description":"<p>The collapsible's state after toggling\n    (<code>true</code> if expanded, <code>false</code> if collapsed).</p>"}],"name":"toggle","longname":"module:htz-collapsibles/changeState~toggle","kind":"function","scope":"inner","memberof":"module:htz-collapsibles/changeState","___id":"T000002R000003","___s":true,"attribs":"<span class=\"type-signature\">(inner) </span>","id":"~toggle","signature":"<span class=\"signature\">(wrapper, contentElem, toggleElem, labelExpand, labelCollapse, collapsedClass, expandedClass, bpsSelector, isExpanded<span class=\"signature-attributes\">opt</span>)</span><span class=\"type-signature\"> &rarr; {Boolean}</span>","ancestors":["<a href=\"module-htz-collapsibles_changeState.html\">htz-collapsibles/changeState</a>~"]}
+</pre>
+-->
+</div>
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Thu Jan 19 2017 16:16:34 GMT+0200 (IST) using the LOKE theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
