@@ -15,27 +15,25 @@ element collapsible on all breakpoints, while `data-collapsible-bps="s-until-m, 
 an element collapsible between the `s` breakpoint and the `m` breakpoint (not including), and then 
 again from the `l` breakpoint on.
 
-Initialize collapsible elements with:
+Initialize a collapsible element with:
 ```js
-  const collapibleEls = collapsibles(
-    labelExpand,    // The label used to describe the toggle button  when
-                    // the element is collapsed and it is used expanding.
+  const collapsible = collapsibles(
+    element,        // The element to initialize.
 
-    labelCollapse,  // The label used to describe the toggle button when 
-                    //the element is expanded and it is used collapsing.
+    labelExpand,    // The label used to describe the toggle button
+                    // when the element is collapsed and the toggle button 
+                    // is used for expanding.
+    labelCollapse,  // The label used to describe the toggle button
+                    // when the element is expanded and the toggle button is used 
+                    // for collapsing.
 
     // Optional arguments
-    collapsedClass, // The label to attach to the wrapper when it is collapsed.
+    collapsedClass  // The class to attach to the wrapper when it is collapsed.
                     // Default: 'o-collapsible-is-collapsed'
-
-    expandedClass,  // The label to attach to the wrapper when it is expanded.
+    expandedClass,  // The class to attach to the wrapper when it is expanded.
                     // Default: 'o-collapsible-is-expanded'
-
-    initClass,      // A class to identify collapsible items by.
-                    // Default: 'js-collapsible'
-
-    bpsSelector     // A selector for the element to which the 
-                    // active breakpoint data is attached.
-                    // See https://github.com/haaretz/htz-parse-bps-state
+    bpsSelector     // A selector for the element to which the active breakpoint 
+                    // data is attached. See [htz-parse-bps-state](https://github.com/haaretz/htz-parse-bps-state)
+                    // Default: 'body'
   );
 ```
